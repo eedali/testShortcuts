@@ -1,0 +1,11 @@
+{
+  "id": "com.kobar.testshortcuts",
+  "name": "Test Shortcuts",
+  "version": "1.0.0",
+  "description": "Standalone shortcuts manager plugin",
+  "author": "Antigravity",
+  "entry": "index.js",
+  "icon": "apps",
+  "categories": ["Utility"],
+  "languages": ["en"]
+}
