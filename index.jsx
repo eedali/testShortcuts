@@ -177,20 +177,6 @@ const TestShortcutsPanel = ({ onClose, anchorRect }) => {
             className="border shadow-2xl pointer-events-auto animate-in fade-in zoom-in duration-200 overflow-hidden flex flex-col rounded-xl"
             style={getPopupStyle()}
         >
-            <div className="flex justify-between items-center p-4 pb-3 bg-white/5 border-b border-white/10">
-                <div className="flex items-center gap-2 drag-region w-full">
-                    <span className="material-symbols-outlined text-[16px] text-primary">apps</span>
-                    <span className="text-[10px] uppercase tracking-wider text-slate-300 font-bold">
-                        Plugin Shortcuts
-                    </span>
-                </div>
-                <button 
-                    onClick={onClose}
-                    className="w-6 h-6 rounded-lg bg-white/5 text-slate-400 hover:text-white hover:bg-red-500/20 flex items-center justify-center transition-all no-drag-region"
-                >
-                    <span className="material-symbols-outlined text-[16px]">close</span>
-                </button>
-            </div>
 
             <div 
                 className="flex-1 p-4 flex flex-wrap gap-3 justify-center content-start max-h-80 overflow-y-auto custom-scrollbar"
@@ -264,6 +250,7 @@ const TestShortcutsPanel = ({ onClose, anchorRect }) => {
                                         if (e.shiftKey) return;
                                         if (deletingId !== app.id && app.path && api?.launchFile) {
                                             api.launchFile(app.path);
+                                            onClose();
                                         }
                                     }}
                                     title={app.tag ? `[${app.tag}] ${app.name}` : app.name}
