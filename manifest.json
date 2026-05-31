@@ -1,7 +1,7 @@
 {
   "id": "com.kobar.testshortcuts",
   "name": "Test Shortcuts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Standalone shortcuts manager plugin",
   "author": "eedali",
   "entry": "index.js",
